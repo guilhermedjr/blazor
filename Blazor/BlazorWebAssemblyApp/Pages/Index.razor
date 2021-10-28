@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inherits IndexBase
 
 <h1>Lista de Tarefas</h1>
 
@@ -19,22 +20,3 @@
         </li>
     }
 </ul>
-
-@code {
-    public class TodoItem
-    {
-        public string Title { get; set; }
-        public bool IsDone { get; set; }
-    }
-
-    private string newTodo = "";
-    private List<TodoItem> todos = new List<TodoItem>();
-
-    void AddNewTask()
-    {
-        if (!string.IsNullOrWhiteSpace(newTodo)) {
-            todos.Add(new TodoItem { Title = newTodo });
-            newTodo = "";
-        }
-    }
-}
