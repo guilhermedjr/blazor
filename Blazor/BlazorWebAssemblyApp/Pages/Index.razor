@@ -15,7 +15,7 @@
     {
         <li>
             <label>
-                <input class="uk-checkbox" type="checkbox" @bind='item.IsDone' /> @item.Title
+                <input class="uk-checkbox" type="checkbox" @bind='item.IsDone' @onclick='() => CheckTask(item)'/> @item.Title
             </label>
         </li>
     }
